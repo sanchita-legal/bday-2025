@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-5">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Happy Birthday :D</title>
+
+		<link rel="shortcut icon" href="./static/favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="./static/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="./static/css/bookblock.css" />
+		<!-- custom demo style -->
+		<link rel="stylesheet" type="text/css" href="./static/css/demo5.css" />
+		<script src="./static/js/modernizr.custom.js"></script>
+
+		<style type="text/css">
+			@-webkit-keyframes flames {
+  0% {
+    height: 2.2em;
+    -webkit-transform: rotate(0.5deg);
+            transform: rotate(0.5deg);
+    opacity: 0.8;
+  }
+  100% {
+    height: 2.5em;
+    -webkit-transform: rotate(-0.5deg);
+            transform: rotate(-0.5deg);
+    border-radius: 50% / 30%;
+    border-top-right-radius: 50% 60%;
+    border-top-left-radius: 50% 60%;
+    opacity: 1;
+  }
+}
+@keyframes flames {
+  0% {
+    height: 2.2em;
+    -webkit-transform: rotate(0.5deg);
+            transform: rotate(0.5deg);
+    opacity: 0.8;
+  }
+  100% {
+    height: 2.5em;
+    -webkit-transform: rotate(-0.5deg);
+            transform: rotate(-0.5deg);
+    border-radius: 50% / 30%;
+    border-top-right-radius: 50% 60%;
+    border-top-left-radius: 50% 60%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes candles {
+  0% {
+    height: 10em;
+    border-radius: 50% / 5%;
+  }
+  100% {
+    height: 2em;
+    border-radius: 50% / 25%;
+  }
+}
+@keyframes candles {
+  0% {
+    height: 10em;
+    border-radius: 50% / 5%;
+  }
+  100% {
+    height: 2em;
+    border-radius: 50% / 25%;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffe0e5;
+  color: #864313;
+  font-size: 12px;
+}
+
+p {
+  text-align: center;
+  padding: 2em;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  background: #ffffcc;
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: -300px;
+}
+
+.cake {
+  height: 20em;
+  width: 30em;
+  margin: 10em auto 0;
+  position: relative;
+  border-radius: 100% / 50%;
+  background: #7b3d11;
+  border-bottom: 0.25em solid #2d1606;
+}
+.cake::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15em;
+  border-radius: 50%;
+  background: #7b3d11;
+  border-bottom: 0.5em solid #221105;
+  z-index: 10;
+}
+.cake::after {
+  content: '';
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15em;
+  border-radius: 50%;
+  border-top-right-radius: 25%;
+  border-top-left-radius: 25%;
+  background: #864313;
+  box-shadow: 0 5em 0 #ffffcc, 0 10em 0 #864313;
+}
+
+.candles {
+  z-index: 20;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 8em;
+  width: 2em;
+  position: absolute;
+  bottom: 15.2em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50% / 5%;
+  -webkit-animation: candles 10s 2s 2 alternate;
+          animation: candles 10s 2s 2 alternate;
+  background: #ffcc00;
+  box-shadow: -3.5em 5em 0 0 #77DD77, 3.5em 5em 0 0 #FF6961, -7em -2.5em 0 -3px #FFB347, 7em -2.5em 0 -3px #779ECB, -10.5em 2em 0 -1px #B19CD9, 10.5em 2em 0 -1px #A5D3CA;
+}
+.candles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  border-radius: 50%;
+  background: #cca300;
+  box-shadow: -3.5em 5em 0 0 #4ed34e, 3.5em 5em 0 0 #ff392e, -7em -2.5em 0 -3px #ff9e14, 7em -2.5em 0 -3px #5284bd, -10.5em 2em 0 -1px #9477cb, 10.5em 2em 0 -1px #83c2b6;
+}
+.candles::after {
+  content: '';
+  position: absolute;
+  top: -2em;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50% / 40%;
+  border-top-right-radius: 50% 60%;
+  border-top-left-radius: 50% 60%;
+  background: #E29822;
+  height: 2.5em;
+  width: 1.5em;
+  -webkit-animation: flames 0.75s infinite alternate;
+          animation: flames 0.75s infinite alternate;
+  box-shadow: 0 0 0 1px #e8ad4f, -3.5em 5em 1px 0 #E29822, 3.5em 5em 1px 0 #E29822, -7em -2.5em 1px 0 #E29822, 7em -2.5em 1px 0 #E29822, -10.5em 2em 1px 0 #E29822, 10.5em 2em 1px 0 #E29822;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				
+			</div>
+			<header>
+				<h1 class='title'>Happy Happy birthday Sanchu!</h1>
+				<div class='cake'>
+				  <div class='candles'></div>
+				</div>
+			</header>
+			<div class="main clearfix">
+				<ul class="bb-custom-grid" id="bb-custom-grid" >
+				<div style="">
+					<li style="float:left;display:table-cell;margin-left:-250px;margin-top:-400px;">
+						<h3 style="color:maroon;"><strong> Anushtha says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+								<img style="padding-left:20px;" src="./static/images/wishes/anushtha.jpeg" alt="image01"/>
+							</div>
+							<div class="bb-item">
+							<h2 style="padding-top:50px;">
+								Hi Sanchu, remember the best thing that had happened in college? Yes, that’s me! Bohot saal jhel liya, ab aur nahi bs. Guggs 😚
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+						</nav>
+					</li>
+					<br>
+					<li style="float:left;display:table-cell;margin-left:-250px;margin-top:-30px;">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+						</nav>
+					</li>
+					</div>
+					<li style="margin-top:90px;margin-left: 75px;">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+						</nav>
+					</li>
+					<div style="">
+					<li style="float:right;display:table-cell;margin-right:-250px;margin-top:-430px;">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+							
+						</nav>
+					</li>
+					<br>
+					<li style="float:right;display:table-cell;margin-right:-250px;margin-top:-40px;"">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+						</nav>
+					</li>
+					</div>
+					<div style="">
+					<li style="float:left;display:table-cell;margin-left:-780px;margin-top:340px;">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+						</nav>
+					</li>
+					<br>
+					<li style="float:right;display:table-cell;margin-right:-250px;margin-top:40px;"">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+							<span></span>
+						</nav>
+					</li>
+					</div>
+					<li style="margin-top:40px;margin-left: 185px;">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./static/images/demo3/5.jpg" alt="image01"/></div>
+							<div class="bb-item">
+							<h2>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+							<span></span>
+						</nav>
+					</li>
+					<br>
+					<li style="float:left;display:table-cell;margin-left:-790px;margin-top:310px;">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">
+							<h2>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+						</nav>
+					</li>
+					<br>
+					<li style="float:right;display:table-cell;margin-right:-250px;margin-top:50px;"">
+						<h3 style="color:maroon;"><strong> <> says: </strong></h3>
+						<div class="bb-bookblock">
+							<div class="bb-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./static/images/demo3/5.jpg" alt="image01"/></div>
+
+							<div class="bb-item">
+							<h2>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</h2>
+							</div>							
+						</div>
+						<nav>
+							<span class="bb-current"></span>
+							<span></span>
+						</nav>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="./static/js/jquerypp.custom.js"></script>
+		<script src="./static/js/jquery.bookblock.js"></script>
+		<script type="text/javascript">
+			var Page = (function() {
+
+				var $grid = $( '#bb-custom-grid' );
+
+				return {
+					init : function() {
+						$grid.find( 'div.bb-bookblock' ).each( function( i ) {
+							
+							var $bookBlock = $( this ),
+								$nav = $bookBlock.next().children( 'span' ),
+								bb = $bookBlock.bookblock( {
+									speed : 600,
+									shadows : false
+								} );
+								
+							// add navigation events
+							$nav.each( function( i ) {
+								$( this ).on( 'click touchstart', function( event ) {
+									var $dot = $( this );
+									$nav.removeClass( 'bb-current' );
+									$dot.addClass( 'bb-current' );
+									$bookBlock.bookblock( 'jump', i + 1 );
+									return false;
+								} );
+							} );
+							
+							// add swipe events
+							$bookBlock.children().on( {
+								'swipeleft' : function( event ) {
+									$bookBlock.bookblock( 'next' );
+									return false;
+								},
+								'swiperight' : function( event ) {
+									$bookBlock.bookblock( 'prev' );
+									return false;
+								}
+
+							} );
+							
+						} );
+					}
+				};
+
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
+	</body>
+</html>
